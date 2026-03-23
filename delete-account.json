@@ -1,0 +1,23 @@
+{
+  "title": "Delete Account",
+  "sections": [
+    {
+      "heading": "Steps to Delete Your Account",
+      "content": [
+        "Note: After deletion, your account data will be retained for 30 days for security and recovery purposes. After 30 days, all data will be permanently removed."
+      ]
+    },
+    {
+      "heading": "How to Delete Your Account:",
+      "content": [
+        "1. Log in using the Account you want to Delete.",
+        "2. Go to Settings from your Profile page.",
+        "3. Tap on \"Account Settings\"",
+        "4. Tap on 'More (Additional Settings)'",
+        "5. Tap on \"Delete Account\"",
+        "6. Tap the confirmation box to enable the \"Delete Account\" button.",
+        "7. Press \"Delete Account\" to permanently delete your account."
+      ]
+    }
+  ]
+}
