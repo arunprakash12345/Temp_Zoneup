@@ -144,5 +144,23 @@
         });
       });
   </script>
+  <script>
+    // Page transition: fade in on load, fade out on navigate
+    document.addEventListener('DOMContentLoaded', function() {
+      document.body.classList.add('page-ready');
+    });
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[href]');
+      if (!link) return;
+      var href = link.getAttribute('href');
+      if (!href || href.startsWith('#') || href.startsWith('javascript') || link.target === '_blank') return;
+      e.preventDefault();
+      document.body.classList.add('page-leaving');
+      document.body.classList.remove('page-ready');
+      setTimeout(function() {
+        window.location.href = href;
+      }, 300);
+    });
+  </script>
 </body>
 </html>
