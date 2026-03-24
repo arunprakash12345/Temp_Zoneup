@@ -89,7 +89,8 @@
             <img src="./Assets/InstantConnect.png" alt="Match">
           </div>
           <h3 class="feature-card-title">Instant Connect</h3>
-          <p class="feature-card-desc">Build real connections instantly with your nearby community.
+          <p class="feature-card-desc">Build real connections instantly
+with people in your nearby community
 
 </p>
         </div>
@@ -99,24 +100,30 @@
             <img src="./Assets/Safety.png" alt="Verified">
           </div>
           <h3 class="feature-card-title">Safety and Security</h3>
-          <p class="feature-card-desc">Your privacy and safety are always our top priorities.</p>
+          <p class="feature-card-desc">Your privacy and safety come first
+with secure and trusted interactions</p>
         </div>
         <!-- Col 3, Row 1 -->
         <div class="feature-card">
           <div class="feature-card-img">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop" alt="Speed">
+            <img src="./Assets/Burn post.png" alt="Speed">
           </div>
-          <h3 class="feature-card-title">Real-Time Updates</h3>
-          <p class="feature-card-desc">Stay updated instantly with local happenings as they unfold.
+          <h3 class="feature-card-title">Burn Posts</h3>
+          <p class="feature-card-desc">Share moments that disappear
+after a short time automatically
+
+
 </p>
         </div>
         <!-- Col 1, Row 2 -->
         <div class="feature-card">
           <div class="feature-card-img">
-            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=250&fit=crop" alt="Memories">
+            <img src="./Assets/Personalised posts.png" alt="Memories">
           </div>
-          <h3 class="feature-card-title">Your Memories Book</h3>
-          <p class="feature-card-desc">After a reveal, download your full chat history as a keepsake of your shared journey.</p>
+          <h3 class="feature-card-title">Personalised posts</h3>
+          <p class="feature-card-desc">Tailor your feed based on your interests and local trends.
+
+</p>
         </div>
         <!-- Col 2, Row 2 (short) -->
         <div class="feature-card ">
@@ -128,10 +135,11 @@
         <!-- Col 3, Row 2 -->
         <div class="feature-card">
           <div class="feature-card-img">
-            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=250&fit=crop" alt="Reveal">
+            <img src="./Assets/Real time updates.png" alt="Reveal">
           </div>
-          <h3 class="feature-card-title">Reveal For Both Of You</h3>
-          <p class="feature-card-desc">Choose to reveal both profiles at the same time — only if you both agree.</p>
+          <h3 class="feature-card-title">Real-Time Updates
+</h3>
+          <p class="feature-card-desc">Stay updated instantly with local happenings as they unfold.</p>
         </div>
       </div>
       <!-- Full-width card (Neural Vision - commented out for now)
@@ -299,5 +307,24 @@ Here’s how ZoneUp helps you simplify your routine and stay in control—effort
   </footer>
 
   <script src="main.js"></script>
+  <script>
+    // Page transition: fade in on load, fade out on navigate
+    document.addEventListener('DOMContentLoaded', function() {
+      document.body.classList.add('page-ready');
+    });
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[href]');
+      if (!link) return;
+      var href = link.getAttribute('href');
+      // Only intercept actual page navigations (not anchors or #)
+      if (!href || href.startsWith('#') || href.startsWith('javascript') || link.target === '_blank') return;
+      e.preventDefault();
+      document.body.classList.add('page-leaving');
+      document.body.classList.remove('page-ready');
+      setTimeout(function() {
+        window.location.href = href;
+      }, 300);
+    });
+  </script>
 </body>
 </html>
