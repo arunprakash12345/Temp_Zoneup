@@ -773,6 +773,17 @@ font-family: 'Satoshi', sans-serif;
   gap: 40px;
   margin-bottom: 28px;
 }
+.footer-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 1.5rem;
+}
+.mailto{
+  text-decoration: none;
+  list-style: none;
+  color: white;
+}
 
 .footer-cta-left {
   flex: 1;
@@ -814,6 +825,7 @@ font-family: 'Satoshi', sans-serif;
   display: flex;
   gap: 12px;
   flex-shrink: 0;
+  justify-content: end;
 }
 
 .social-icon {
